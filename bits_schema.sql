@@ -1,6 +1,4 @@
-CREATE DATABASE BITS;
-
-USE BITS;
+USE bits;
 
 CREATE TABLE Consultant (
     ConsltNum CHAR(2) PRIMARY KEY,
@@ -261,5 +259,36 @@ VALUES
 ('68979','DA11','2018-09-27',970.00)
 ;
 
+
+USE bits;
+
+SHOW TABLES;
+
+# Question 1
+SELECT * 
+FROM bits.Client
+WHERE Creditlimit < 10000;
+
+# Question 3
+SELECT * 
+FROM WorkOrders
+WHERE ClientNum = 322;
+
+# Question 4
+SELECT *
+FROM OrderLine
+WHERE TaskID = 'SA44';
+
+# Question 7
+SELECT *
+FROM Consultant;
+
+SELECT SUM(Balance)
+FROM Client
+WHERE ConsltNum = 19;
+
+# Question 11
+SELECT * 
+FROM Client;
 
 

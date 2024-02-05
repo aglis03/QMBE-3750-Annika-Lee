@@ -1,6 +1,4 @@
-CREATE DATABASE Sports;
-
-USE Sports;
+USE sports;
 
 CREATE TABLE Patient (
     PatientNum CHAR(4) PRIMARY KEY,
@@ -283,4 +281,55 @@ VALUES
 ('SW124','Wilder','Steven','7354 Rockville Road','San Vista','TX','72510')
 ;
 
+USE sports;
 
+SHOW TABLES;
+
+# Question 4
+SELECT * 
+FROM Therapist;
+
+SELECT * 
+FROM Session
+WHERE TherapistID = 'SW124';
+
+SELECT * 
+FROM Therapies
+WHERE TherapyCode IN (97014, 97113);
+
+# Question 6
+SELECT * 
+FROM Patient
+WHERE LastName = 'Odepaul';
+
+SELECT * 
+FROM Session
+WHERE PatientNum = 1014;
+
+SELECT * 
+FROM Therapist
+WHERE TherapistID = 'SW124';
+
+# Question 8
+SELECT * 
+FROM Patient
+WHERE LastName = 'Baptist';
+
+SELECT * 
+FROM Session
+WHERE PatientNum = 1018;
+
+SELECT * 
+FROM Therapies
+WHERE TherapyCode = 97035;
+
+
+
+SELECT * 
+FROM Session;
+
+SELECT * 
+FROM Therapies;
+
+SELECT * 
+FROM Therapist;

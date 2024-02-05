@@ -1,6 +1,4 @@
-CREATE DATABASE COLONIAL;
-
-USE COLONIAL;
+USE colonial;
 
 CREATE TABLE Guide
 (GuideNum CHAR(4) PRIMARY KEY,
@@ -488,3 +486,54 @@ VALUES
 INSERT INTO TripGuides
 VALUES
 (41,'BR01');
+
+
+USE colonial;
+
+SHOW TABLES;
+
+# Question 4
+SELECT * 
+FROM Trip
+WHERE Type = 'Biking' AND Distance > 20;
+
+# Question 5
+SELECT * 
+FROM Trip
+WHERE State = 'VT' OR MaxGrpSize > 10;
+
+# Question 9
+SELECT * 
+FROM Guide
+WHERE LastName = 'Boyers';
+
+SELECT *
+FROM TripGuides
+WHERE GuideNum = 'BR01';
+
+SELECT * 
+FROM Trip
+WHERE Type = 'Biking' AND TripID IN (4, 8, 9, 12, 24, 25, 28, 39, 41);
+
+SELECT * 
+FROM Trip
+WHERE Type = 'Biking';
+
+# Question 13
+SELECT CustomerNum, COUNT(*)
+FROM Reservation
+GROUP BY CustomerNum
+HAVING COUNT(*) > 1;
+
+SELECT * 
+FROM Reservation
+WHERE CustomerNum IN (101, 104, 102, 119, 120, 121, 126, 124);
+
+SELECT * 
+FROM Customer
+WHERE CustomerNum IN (101, 104, 102, 119, 120, 121, 126, 124);
+
+SELECT * 
+FROM Trip
+WHERE TripID IN (40, 26, 2, 3, 12, 10, 11, 38, 25, 28, 21, 4, 15);
+
