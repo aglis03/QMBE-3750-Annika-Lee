@@ -281,6 +281,9 @@ VALUES
 ('SW124','Wilder','Steven','7354 Rockville Road','San Vista','TX','72510')
 ;
 
+
+# Assignment 1: SPORTS
+
 USE sports;
 
 SHOW TABLES;
@@ -324,12 +327,3 @@ FROM Therapies
 WHERE TherapyCode = 97035;
 
 
-
-SELECT * 
-FROM Session;
-
-SELECT * 
-FROM Therapies;
-
-SELECT * 
-FROM Therapist;

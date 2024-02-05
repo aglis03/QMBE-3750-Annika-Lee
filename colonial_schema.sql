@@ -488,6 +488,8 @@ VALUES
 (41,'BR01');
 
 
+# Assignment 1: COLONIAL
+
 USE colonial;
 
 SHOW TABLES;
@@ -536,4 +538,5 @@ WHERE CustomerNum IN (101, 104, 102, 119, 120, 121, 126, 124);
 SELECT * 
 FROM Trip
 WHERE TripID IN (40, 26, 2, 3, 12, 10, 11, 38, 25, 28, 21, 4, 15);
+
 

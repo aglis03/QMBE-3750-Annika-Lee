@@ -260,6 +260,8 @@ VALUES
 ;
 
 
+# Assignment 1: BITS
+
 USE bits;
 
 SHOW TABLES;
@@ -290,5 +292,4 @@ WHERE ConsltNum = 19;
 # Question 11
 SELECT * 
 FROM Client;
-
 
